@@ -1,0 +1,15 @@
+@startuml
+
+class WordFinder{
+
+}
+
+class Solution45{
+String fileInput
+String newOutput
+main()
+replaceKeyword()
+writeToFile()
+}
+
+@enduml
