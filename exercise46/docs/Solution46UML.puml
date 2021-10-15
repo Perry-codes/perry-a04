@@ -1,0 +1,10 @@
+@startuml
+
+class Solution46{
+String inputFile
+main()
+}
+
+class WordCounter{
+}
+@enduml
