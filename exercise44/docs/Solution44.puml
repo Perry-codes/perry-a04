@@ -1,0 +1,15 @@
+@startuml
+
+class Solution44{
+fileLocation
+main()
+}
+
+class Products{
+ListArray products
+
+itemExists()
+itemLookup()
+}
+
+@enduml
