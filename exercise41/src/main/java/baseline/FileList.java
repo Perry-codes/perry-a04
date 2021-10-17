@@ -11,7 +11,7 @@ import java.util.*;
 
 public class FileList {
 
-    private List<String> names = new ArrayList<String>();
+    private List<String> names = new ArrayList<>();
 
     public FileList(String fileName) throws FileNotFoundException {
         addNamesFromFile(fileName);

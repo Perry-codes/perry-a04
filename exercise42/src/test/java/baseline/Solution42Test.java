@@ -8,7 +8,7 @@ class Solution42Test {
 
     @Test
     void readValues() {
-        
+
     }
 
     @Test

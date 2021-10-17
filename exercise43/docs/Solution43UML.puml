@@ -1,21 +1,17 @@
 @startuml
 
 class Solution43 {
-String siteName
-String siteAuthor
-Boolean jsFolder
-Boolean cssFolder
 main()
 }
 
 class websiteTemplate{
-String siteName
-String siteAuthor
-File index
+-String siteName
+-String siteAuthor
+-Path websiteRoot
 
-createJsFolder()
-createCssFolder()
-createIndexFile()
+-createJsFolder()
+-createCssFolder()
+-createIndexFile()
 
 }
 

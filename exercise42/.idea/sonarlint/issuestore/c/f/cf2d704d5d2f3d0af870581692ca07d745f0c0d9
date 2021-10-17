@@ -1,0 +1,10 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(ôÑî
+S
+java:S1172"1Remove this unused method parameter "fullString".(µÈÄÕùÿÿÿÿ8…±È/
+C
+java:S1168"&Return an empty array instead of null.(‚ÔÄŒ8…±È/
+O
+java:S1172"2Remove this unused method parameter "stringArray".(™Ã‚Æ8Ğ”·È/
+E
+java:S1144"/Remove this unused private "writeTable" method.(™Ã‚Æ
