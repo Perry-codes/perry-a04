@@ -5,9 +5,11 @@
 
 package baseline;
 
+import java.io.FileNotFoundException;
+
 public class Solution41 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         /*
         Create a program that reads in the following list of names from a file called `exercise41_input.txt` and sorts
@@ -23,9 +25,11 @@ public class Solution41 {
          */
 
         //new instance of File List class
-        //assign file name
-        //push filename to upload to list
-        //return sorted list
+        FileList l = new FileList("data/exercise41_input.txt");
+        //sort name
+        l.sortNames();
+        //print sorted list to file
+        l.printToFile("data/exercise41_output.txt");
 
     }
 }

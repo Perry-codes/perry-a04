@@ -1,49 +1,58 @@
 package baseline;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 public class FileList {
 
-    private List<String> names = new ArrayList<>;
+    private List<String> names = new ArrayList<String>();
 
+    public FileList(String fileName) throws FileNotFoundException {
+        addNamesFromFile(fileName);
+    }
 
-
+    public FileList() {
+        //empty constructor for testing
+    }
 
     public void sortNames(){
         //sort names list
-        names.sort();
+        Collections.sort(names);
     }
 
-    public int getNamesCount(){
-    return names.size();
-    }
-
-     public String getNames(){
-        return names;
+     public String getNames(int index){
+        return names.get(index);
      }
 
-    public void removeNamesFromFile(String file){
-    //unused-not needed for current assignment parameters
-    }
-
-    public void removeName(String name){
-    //unused-not needed for current assignment parameters
-    }
-
-    public void toString(){
+    public void printToFile(String outputFile){
         //set to return list of names
-        return null
+        try (Formatter output = new Formatter(outputFile)){
+            output.format("Total of %d names%n%s%n",names.size(),"------------------");
+            for (String name : names) {
+                output.format("%s%n", name);
+            }
+        } catch (SecurityException | FileNotFoundException | FormatterClosedException e){
+            System.err.println("An error has occurred.");
+            e.printStackTrace();
+        }
     }
 
-    public void addNamesFromFile(String file) {
+    private void addNamesFromFile(String file) throws FileNotFoundException {
+        //Scanner to read the file
+        Scanner s = new Scanner( new File(file) );
         //read file
         //while hasnext
-        //add next line to name Array list
+        while(s.hasNextLine()){
+            //add next line to name Array list
+            names.add(s.nextLine());
+        }
+        s.close();
     }
 
     public void addName(String name) {
         //add string input to array list
         //used to testing
+        names.add(name);
     }
 }
